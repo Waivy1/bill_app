@@ -13,5 +13,5 @@ class Flatmate:
 
     def pays(self, bill, person2):
 
-        weight = int(self.days_in_house) / (self.days_in_house + person2.days_in_house)
+        weight = int(self.days_in_house) / (int(self.days_in_house) + int(person2.days_in_house))
         return weight * int(bill.amount)

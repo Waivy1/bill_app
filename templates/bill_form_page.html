@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css">
 </head>
 <body>
+<h2>bill form page</h2>
 return to
 <a href={{url_for('home_page')}}>home page</a>
+<form action="/bill" method="post">
+    {{billform.amount.label}} {{billform.amount}}
+    <br>
+    {{billform.period.label}} {{billform.period}}
+    <hr>
+    <p>first person</p>
+    {{billform.name1.label}} {{billform.name1}}
+    <br>
+    {{billform.days_in_the_house.label}} {{billform.days_in_the_house}}
+    <br>
+    <hr>
+    <p>second person</p>
+    {{billform.name2.label}} {{billform.name2}}
+    <br>
+    {{billform.days_in_the_house2.label}} {{billform.days_in_the_house2}}
+    <br>
+
+    {{billform.button}}
+    <br>
+    <hr>
+    {% if resut %}
+    {{name1}} pays {{amount1}} and
+    {{name2}} pays {{amount2}}
+    {% endif %}
+
+
+
+</form>
 </body>
 </html>

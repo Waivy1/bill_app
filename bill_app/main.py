@@ -1,5 +1,5 @@
-from files.person import Bill, Flatmate
-from files.reports import PDFReport
+from bill_app.person import Bill, Flatmate
+from bill_app.reports import PDFReport
 
 bill_amount = input('enter a bill amount:')
 period = input('enter a month: ')
